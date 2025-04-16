@@ -6,6 +6,10 @@
 # Bluetooth Step Counter With ESP32
 This project uses an ESP32 TTGO board to demonstrate wireless control and motion sensing. In Part A, a mobile phone sends commands via Wi-Fi or Bluetooth to turn an LED on or off, showcasing basic client-server communication. In Part B, the ESP32 reads motion data from the LSM6DS3 sensor to count steps based on threshold detection. The step count is sent to a phone via BLE, simulating a simple fitness tracker.
 # Top Down View of Circuit
+* PINS Green on 22 TTGO to SCL LSSM6DSO
+* PINS Red on 3V TTGO to 3V3 LSSM6DSO
+* PINS Black on G TTGO to GND LSSM6DSO
+* PINS Blue on 21 TTGO to SDI LSSM6DSO 
 ![Hardware Setup Diagram](IMG_5068.jpg)
 ![Hardware Setup Diagram PART 2](circuit.jpg)
 
