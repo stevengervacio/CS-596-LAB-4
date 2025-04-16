@@ -6,11 +6,12 @@
 # Bluetooth Step Counter With ESP32
 This project uses an ESP32 TTGO board to demonstrate wireless control and motion sensing. In Part A, a mobile phone sends commands via Wi-Fi or Bluetooth to turn an LED on or off, showcasing basic client-server communication. In Part B, the ESP32 reads motion data from the LSM6DS3 sensor to count steps based on threshold detection. The step count is sent to a phone via BLE, simulating a simple fitness tracker.
 # Top Down View of Circuit
+* PIN Blue on 13 
+![Hardware Setup Diagram](IMG_5068.jpg)
 * PINS Green on 22 TTGO to SCL LSSM6DSO
 * PINS Red on 3V TTGO to 3V3 LSSM6DSO
 * PINS Black on G TTGO to GND LSSM6DSO
 * PINS Blue on 21 TTGO to SDI LSSM6DSO 
-![Hardware Setup Diagram](IMG_5068.jpg)
 ![Hardware Setup Diagram PART 2](circuit.jpg)
 
 # Video Demonstration
@@ -22,12 +23,12 @@ This project uses an ESP32 TTGO board to demonstrate wireless control and motion
 * Step detection is active if motion exceeds threshold and step count increases. The step count is printed to serial monitor and sent via BLE to phone in real time
 
 #  Bluetooth Step Counter Summary
-"ON" Command Received: LED turns on
-"OFF" Command Received: LED turns off
-Idle State: LED remains in last state until new command is received
-Sensor Calibration: Performed at startup to set motion baseline
-"CALIBRATE" Command Recieved: Re-calibrate XYZ post-startup calibration
-Step Detection: Active every 20ms using acceleration threshold
-Step Output: Count printed to serial monitor and sent via BLE to phone
-Continuous Operation: System continuously monitors motion and responds to Bluetooth commands
-"RESET" Command Recieved: Reset step counter via phone to TTGO
+* "ON" Command Received: LED turns on
+* "OFF" Command Received: LED turns off
+* Idle State: LED remains in last state until new command is received
+* Sensor Calibration: Performed at startup to set motion baseline
+* "CALIBRATE" Command Recieved: Re-calibrate XYZ post-startup calibration
+* Step Detection: Active every 20ms using acceleration threshold
+* Step Output: Count printed to serial monitor and sent via BLE to phone
+* Continuous Operation: System continuously monitors motion and responds to Bluetooth commands
+* "RESET" Command Recieved: Reset step counter via phone to TTGO
