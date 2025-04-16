@@ -13,15 +13,17 @@ This project uses an ESP32 TTGO board to demonstrate wireless control and motion
 [* PART A DEMO](https://www.youtube.com/watch?v=aB_LuZpD7NU)
 
 # Start Up Sequence
-* System powers on the ESP32 initializes Wi-Fi/Bluetooth stack and waits for connection from mobile phone. LED control system is ready and LED starts in OFF state while it waits for "LED_ON" or "LED_OFF" command from phone to toggle LED state.
+* System powers on the ESP32 initializes Wi-Fi/Bluetooth stack and waits for connection from mobile phone. LED control system is ready and LED starts in OFF state while it waits for "ON" or "OFF" command from phone to toggle LED state.
 * Step counter system starts. LSM6DS3 sensor is calibrated for baseline motion and ESP32 begins reading acceleration data every 20ms.
 * Step detection is active if motion exceeds threshold and step count increases. The step count is printed to serial monitor and sent via BLE to phone in real time
 
 #  Bluetooth Step Counter Summary
-"LED_ON" Command Received: LED turns on
-"LED_OFF" Command Received: LED turns off
+"ON" Command Received: LED turns on
+"OFF" Command Received: LED turns off
 Idle State: LED remains in last state until new command is received
 Sensor Calibration: Performed at startup to set motion baseline
+"CALIBRATE" Command Recieved: Re-calibrate XYZ post-startup calibration
 Step Detection: Active every 20ms using acceleration threshold
 Step Output: Count printed to serial monitor and sent via BLE to phone
 Continuous Operation: System continuously monitors motion and responds to Bluetooth commands
+"RESET" Command Recieved: Reset step counter via phone to TTGO
