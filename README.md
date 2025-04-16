@@ -9,7 +9,6 @@ This project uses an ESP32 TTGO board to demonstrate wireless control and motion
 
 # Video Demonstration
 * Actual video demo is also in repository
-# Features 
 
 # Start Up Sequence
 * System powers on the ESP32 initializes Wi-Fi/Bluetooth stack and waits for connection from mobile phone. LED control system is ready and LED starts in OFF state while it waits for "LED_ON" or "LED_OFF" command from phone to toggle LED state.
